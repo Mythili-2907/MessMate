@@ -21,7 +21,7 @@ db.exec(`
 `);
 
 app.use(express.json({ limit: "20kb" }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 const sessions = new Map();
 function requireAdmin(req, res, next) {
