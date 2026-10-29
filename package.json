@@ -1,0 +1,13 @@
+{
+  "name": "messmate-hostel-food-feedback",
+  "version": "1.0.0",
+  "description": "MessMate Hostel Food Feedback System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "express": "^5.1.0"
+  }
+}

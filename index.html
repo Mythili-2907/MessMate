@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MessMate — Smart Hostel Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="#home">
+    <span>messmate<small>HOSTEL DINING, REIMAGINED</small></span></a>
+    <nav><a class="nav-item active" href="#home">Home</a>
+        <a class="nav-item" href="#feedback">Give feedback</a>
+        <a class="nav-item" href="#admin">Insights</a>
+    </nav><button class="admin-nav" id="adminToggle">♙ &nbsp; Admin login</button></header>
+<main id="home">
+<section class="hero"><div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> YOUR VOICE MAKES THE DIFFERENCE</div>
+    <h1>Better meals.<br><span>Happier hostel.</span></h1>
+    <p>Good food makes a great day. Share your dining experience and help shape a better menu for everyone.</p>
+    <div class="hero-actions"><a class="btn-primary" href="#feedback">Share your feedback <b>↗</b></a>
+        <a class="text-link" href="#admin">Explore meal insights <span>→</span></a></div>
+        <div class="hero-proof"><div class="avatar-stack"><i>☺</i><i>✦</i><i>♥</i></div>
+        <span><strong>Every opinion counts.</strong><small>One minute is all it takes.</small></span></div>
+    </div><div class="hero-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+    <div class="food-emoji">🍜</div>
+    <div class="floating-card rating-float"><span class="float-icon">★</span>
+        <div><strong>4.8 <small>/ 5</small></strong><span>Meal satisfaction</span></div></div>
+        <div class="floating-card fresh-float"><span class="fresh-icon">✳</span>
+            <div><strong>Fresh feedback</strong><span>Real student voices</span></div></div>
+            <div class="art-caption">MADE FOR YOUR MESS <span>✦</span></div></div></section>
+<div class="ticker"><span>✳ BREAKFAST</span><i>·</i><span>✳ LUNCH</span><i>·</i><span>✳ DINNER</span><i>·</i><span>✳ YOUR FEEDBACK</span><i>·</i><span>✳ BETTER EVERY DAY</span></div>
+<section class="feedback-section" id="feedback"><div class="section-heading"><div><div class="eyebrow dark-eyebrow">01 — YOUR EXPERIENCE</div><h2>How was your <span>meal today?</span></h2></div><p>Honest feedback helps us celebrate what’s great and improve what isn’t.</p></div><div class="feedback-layout"><div class="feedback-aside"><div class="aside-number">01<span>/03</span></div><h3>Small feedback.<br>Big difference.</h3><p>Your thoughts help the hostel team serve meals you actually look forward to.</p><div class="benefit"><span>✓</span><div><strong>Quick & simple</strong><small>Done in under a minute</small></div></div><div class="benefit"><span>✓</span><div><strong>Every meal matters</strong><small>Breakfast, lunch or dinner</small></div></div><div class="aside-decoration">GOOD FOOD IS A TEAM EFFORT <span>↗</span></div></div>
+<form class="form-card" id="feedbackForm"><div class="form-top"><div><span class="form-step">LET'S GET STARTED</span><h3>Rate your meal</h3></div><span class="form-illustration">✳</span></div><label for="studentName">Your name</label><input id="studentName" maxlength="100" placeholder="e.g. Rahul Kumar" required><label for="meal">Which meal did you have?</label><select id="meal" required><option value="">Choose your meal</option><option>Breakfast</option><option>Lunch</option><option>Dinner</option></select><label>How would you rate it?</label><div class="stars" id="stars" role="group" aria-label="Food rating"><button type="button" data-rating="1" aria-label="1 star">★</button><button type="button" data-rating="2" aria-label="2 stars">★</button><button type="button" data-rating="3" aria-label="3 stars">★</button><button type="button" data-rating="4" aria-label="4 stars">★</button><button type="button" data-rating="5" aria-label="5 stars">★</button></div><div class="rating-hint" id="ratingText">Tap a star to rate your meal</div><label for="comments">Tell us a little more</label><textarea id="comments" maxlength="1000" placeholder="What did you love? What can we improve?" required></textarea><button class="submit-btn" type="submit">Send feedback <span>↗</span></button><p class="form-message" id="message" role="status"></p><small class="privacy-note">♡ &nbsp;Your feedback helps make every meal better.</small></form></div></section>
+<section class="dashboard-section" id="admin"><div class="section-heading dashboard-heading">
+    <div id="adminControls" class="hidden">
+    <span>✓ Admin logged in</span>
+    <button type="button" id="adminSignOut" class="submit-btn">
+        Sign Out ↗
+    </button>
+</div>
+<div><div class="eyebrow dark-eyebrow">02 — THE BIG PICTURE</div>
+<h2>Dining <span>at a glance.</span></h2>
+<p>Real-time insights from your hostel community.</p></div><div class="dashboard-status"><span class="pulse"></span> LIVE OVERVIEW</div></div>
+<form id="loginForm" class="login-box hidden"><div><h3>Admin access</h3><p>Sign in to manage student feedback.</p></div><input id="adminUsername" placeholder="Username" autocomplete="username" required><input id="adminPassword" type="password" placeholder="Password" autocomplete="current-password" required><button class="submit-btn" type="submit">Sign in ↗</button><p id="loginMessage" class="form-message"></p><small>Demo login: admin / Hostel@123</small></form>
+<div class="stats-grid"><article class="stat-card stat-dark"><div class="stat-top"><span>TOTAL RESPONSES</span><span class="stat-symbol">↗</span></div><strong id="total">0</strong><small>Student voices collected</small><div class="stat-bottom-line"></div></article><article class="stat-card"><div class="stat-top"><span>AVERAGE RATING</span><span class="stat-symbol star-symbol">★</span></div><strong id="average">0.0<span class="out-of"> / 5</span></strong><small>Across all meals</small><div class="mini-stars">★★★★★</div></article><article class="stat-card"><div class="stat-top"><span>TOP RATED MEAL</span><span class="stat-symbol">✳</span></div><strong class="top-meal" id="topMeal">—</strong><small>Student favourite</small><div class="top-meal-tag">COMMUNITY PICK</div></article></div>
+<div class="analytics-grid"><article class="analytics-card"><div class="card-heading"><div><span class="mini-label">MEAL PERFORMANCE</span><h3>Ratings by meal</h3></div><span class="card-icon">▥</span></div><div id="mealStats" class="bar-list"></div></article><article class="analytics-card"><div class="card-heading"><div><span class="mini-label">SATISFACTION SCORE</span><h3>Rating breakdown</h3></div><span class="card-icon orange-icon">✦</span></div><div id="ratingStats" class="bar-list"></div></article></div>
+<div class="feedback-heading"><div><div class="mini-label">03 — COMMUNITY VOICES</div><h3>Recent feedback</h3><p>See what students are saying about the food.</p></div><select id="mealFilter" aria-label="Filter feedback by meal"><option value="">All meals</option><option>Breakfast</option><option>Lunch</option><option>Dinner</option></select></div><div id="feedbackList" class="feedback-list"><p class="empty">Loading feedback…</p></div>
+</section></main><footer><a class="brand footer-brand" href="#home"><span>messmate<small>HOSTEL DINING, REIMAGINED</small></span></a><p>Made with care for happier hostel meals. <span>✳</span></p><small>FULL STACK DEVELOPMENT PROJECT · 2026</small></footer><script src="script.js"></script></body></html>
